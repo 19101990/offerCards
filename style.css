@@ -1,12 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
-/* font-family: 'Roboto', sans-serif; */
+@import url("https://fonts.googleapis.com/css2?family=Mr+Dafoe&display=swap");
 
 * {
   box-sizing: border-box; /* when we add any border or padding to an element it won't affect it's width */
 }
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Mr Dafoe", cursive;
   margin: 0;
   height: 100vh;
   display: flex;
@@ -34,10 +33,11 @@ body {
 }
 
 .panel h3 {
-  font-size: 24px;
+  font-size: 56px;
+  font-weight: 400;
   position: absolute;
-  bottom: 20px;
-  left: 20px;
+  bottom: 40px;
+  left: 40px;
   margin: 0;
   opacity: 0;
 }
@@ -49,7 +49,13 @@ body {
 
 .panel.active h3 {
   opacity: 1;
-  transition: opacity 0.3s ease-in 0.4s; /*0.4s will delay the effect*/
+  transition: opacity 0.3s ease-in 0.8s; /*0.8s will delay the effect*/
+}
+
+@media (max-width: 700px) {
+  .panel h3 {
+    font-size: 40px;
+  }
 }
 
 @media (max-width: 520px) {
