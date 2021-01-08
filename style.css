@@ -23,6 +23,7 @@ body {
   background-size: auto 100%;
   background-position: center;
   background-repeat: no-repeat;
+  border-radius: 10px;
   height: 89vh;
   color: #fff;
   cursor: pointer;
@@ -42,14 +43,14 @@ body {
   opacity: 0;
 }
 
-/* when the panel has also active class well change flex value to make it bigger */
+/* when the panel has also active class will change flex value to make it bigger */
 .panel.active {
   flex: 5;
 }
 
 .panel.active h3 {
   opacity: 1;
-  transition: opacity 0.3s ease-in 0.8s; /*0.8s will delay the effect*/
+  transition: opacity 0.3s ease-in 0.6s; /*0.6s will delay the effect*/
 }
 
 @media (max-width: 700px) {
