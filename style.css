@@ -1,0 +1,69 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+/* font-family: 'Roboto', sans-serif; */
+
+* {
+  box-sizing: border-box; /* when we add any border or padding to an element it won't affect it's width */
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  width: 90vw;
+}
+
+.panel {
+  background-size: auto 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 89vh;
+  color: #fff;
+  cursor: pointer;
+  flex: 0.5;
+  margin: 3px;
+  position: relative;
+  transition: flex 0.7s ease-in;
+}
+
+.panel h3 {
+  font-size: 24px;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  margin: 0;
+  opacity: 0;
+}
+
+/* when the panel has also active class well change flex value to make it bigger */
+.panel.active {
+  flex: 5;
+}
+
+.panel.active h3 {
+  opacity: 1;
+  transition: opacity 0.3s ease-in 0.4s; /*0.4s will delay the effect*/
+}
+
+@media (max-width: 520px) {
+  .container {
+    width: 100vw;
+  }
+
+  .panel {
+    margin: 1px;
+  }
+
+  /* when the screen is under 520px we will display only first 3 panels */
+  .panel:nth-of-type(4),
+  .panel:nth-of-type(5) {
+    display: none;
+  }
+}
